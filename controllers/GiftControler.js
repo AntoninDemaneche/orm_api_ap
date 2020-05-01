@@ -1,6 +1,3 @@
-
-
-
 var bodyParser = require('body-parser');
 
 
@@ -13,16 +10,16 @@ app.get('/gift', function(req, res){
     res.render('gift', {gifts: data});
 });
 
-app.post('/gift', urlencodedParser, function(req, res){
-    data.push(req.body);
+app.post('/gift', urlencodedParser, (req, res) => {
+    data.push(JSON.parse(JSON.stringify(req.body)));
     res.json(data);
-});
+  });
 
 app.delete('/gift/:item', function(req, res){
     data = data.filter(function(gift){
         return gift.item.replace(/ /g, '-') !== req.params.item;
     });
-    res.json(data);
+    res.json({gifts: data});
 });
 
 };
