@@ -3,18 +3,22 @@
         <title>Super Site de Gift</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
         <!link rel="stylesheet" href="../public/assets/styles.css">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="  crossorigin="anonymous"></script>
+        <!script src="../public/assets/gift-site.js"></script>
     </head>
     <body>
         <h1>Upload Gif</h1>
         <div id="giff-table">
-            <form action="">
-                <input type="text" name="item" placeholder="Add new item...." required>
-                <button type="submit">Add Giff</button>
+            <form method='post'>
+                <input type="text" name="item" placeholder="Ajouter un nouveau gif ...." required/>
+                <button type="submit">Add Gif</button>
             </form>
             <ul>
-                <% for(var i=0; i < gifts.length; i++){ %>
-                    <li><%= gifts[i].item %></li>
-                <% } %>
+                <% gifts.forEach(function(data) { %>
+                    <li><%= data.item %></li>
+               <% }); %>
             </ul>
         </div>
     </body>
@@ -24,9 +28,9 @@
 <style>
 
 body{
-    background: #0d1521;
+    background: #242531;
     font-family: tahoma;
-    color: #989898;
+    color: #daf5f4;
 }
 
 #giff-table{
@@ -89,7 +93,7 @@ li:hover{
 }
 
 h1{
-    background: url(/logo.png) no-repeat center;
+    background: url('../public/assets/logo.png') no-repeat center;
     margin-bottom: 0;
     text-indent: -10000px;
 }
