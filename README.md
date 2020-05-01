@@ -18,3 +18,7 @@ npm install body-parser -save
 ```
 npm install -g nodemon
 ```
+
+```
+npm install ajax
+```
