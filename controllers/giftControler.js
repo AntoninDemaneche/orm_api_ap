@@ -16,11 +16,10 @@ app.post('/gift', urlencodedParser, (req, res) => {
     res.json({gifts: data})
   });
 
-app.delete('/gift/:item', function(req, res){
-    data = data.filter(function(gift){
-        return gift.item.replace(/ /g, '-') !== req.params.item;
-    });
-    res.json({gifts: data});
-});
+  app.delete('/gift/:item',function(req,res){
+    var index = data.indexOf(req.body);
+    data.splice(index,1); 
+    res.json({gifts: data})
+   });
 
 };
