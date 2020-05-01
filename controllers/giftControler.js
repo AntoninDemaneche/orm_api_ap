@@ -12,7 +12,8 @@ app.get('/gift', function(req, res){
 
 app.post('/gift', urlencodedParser, (req, res) => {
     data.push(JSON.parse(JSON.stringify(req.body)));
-    res.json(data);
+    res.redirect('/gift')
+    res.json({gifts: data})
   });
 
 app.delete('/gift/:item', function(req, res){

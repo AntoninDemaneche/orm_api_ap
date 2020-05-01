@@ -3,7 +3,7 @@ $(document).ready(function(){
   $('form').on('submit', function(){
 
       var item = $('form input');
-      var gift = {item: item.val()};
+      var gift = {item: item.val().trim()};
 
       $.ajax({
         type: 'POST',
@@ -19,15 +19,16 @@ $(document).ready(function(){
   });
 
   $('li').on('click', function(){
-      var item = $(this).text().replace(/ /g, "-");
+      var item = $(this).text().trim().replace(/ /g, "-"); 
       $.ajax({
         type: 'DELETE',
         url: '/gift/' + item,
         success: function(data){
-          //do something with the data via front-end framework
           location.reload();
         }
       });
+
+      return false;
   });
 
 });
