@@ -10,7 +10,6 @@ $(document).ready(function(){
         url: '/gift',
         data: gift,
         success: function(data){
-          //do something with the data via front-end framework
           location.reload();
         }
       });
