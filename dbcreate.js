@@ -8,6 +8,6 @@ let db = new sqlite3.Database(db_name, err => {
     console.log('La bdd se lance sur '+db_name)
 
     //db.run(`CREATE TABLE playlist(id INTERGER PRIMARYKEY,name VARCHAR(255) )`)
-    //db.run(`INSERT INTO playlist(name) VALUES("Test3")`)
+    //db.run(`INSERT INTO playlist(name) VALUES("tt")`)
     console.log('Les commandes ce sont executer')
 })
