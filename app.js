@@ -12,30 +12,16 @@ app.set('view engine', 'ejs');
 
 app.use('/assets', express.static('./public'))
 
-const sequelize = new Sequelize('sqlite;chinook.db', 'root', 'root', {
-    host: 'localhost',
-    dialect: 'sqlite'
-  });
+//Connexion à la base de donnée
+const sqlite3 = require('sqlite3')
+const db_name = 'chinook.sqlite'
 
-const Playlist = sequelize.define('playlist', {
-    id: {
-        field: 'PlaylistId',
-        type: Sequelize.INTEGER,
-        primaryKey: true
-    },
-    name:{
-        field: 'Name',
-        type : Sequelize.STRING
-    }
-}, {
-    timestamps: false
-});
+let db = new sqlite3.Database(db_name, err => {
+    if(err)
+        throw err
+    console.log('La bdd se lance sur '+db_name)
+})
 
-app.get('/api/playlist', function(request, reponse){
-   Playlist.findAll().then((playlist) => {
-       response.json(playlist);
-    });
-});
 
 
 giftController(app);
