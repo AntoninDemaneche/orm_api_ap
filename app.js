@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 
 app.use('/assets', express.static('./public'))
 
-const sequelize = new Sequelize('database', 'username', 'password', {
+const sequelize = new Sequelize('sqlite;chinook.db', 'root', 'root', {
     host: 'localhost',
     dialect: 'sqlite'
   });
@@ -43,5 +43,5 @@ giftController(app);
 
 
 app.listen(3000,function(){
-    console.log("Le serveur est lancer sur le port 3000 : http://localhost:3000/");
+    console.log("Le serveur est lancé sur le port 3000 : http://localhost:3000/");
  });
