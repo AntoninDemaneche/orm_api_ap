@@ -18,3 +18,6 @@ npm install body-parser -save
 ```
 npm install -g nodemon
 ```
+```
+npm i express sequelize sqlite3 body-parser --save
+```

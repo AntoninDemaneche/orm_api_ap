@@ -1,19 +1,43 @@
-var express = require('express');
-var giftController = require ('./controllers/GiftControler.js')
+const express = require('express');
+const giftController = require ('./controllers/GiftControler.js')
+const Sequelize = require('sequelize');
 
 
-var app = express();
+const app = express();
 
-//Mise en place du template
+
 app.set('view engine', 'ejs');
 
-//Fichier static
+
 
 app.use('/assets', express.static('./public'))
 
-
-
+//const sequelize = new Sequelize('sqlite;chinook.db');
+//
+//const Playlist = sequelize.define('playlist', {
+//    id: {
+//        field: 'PlaylistId',
+//        type: Sequelize.INTEGER,
+//        primaryKey: true
+//    },
+//    name:{
+//        field: 'Name',
+//        type : Sequelize.STRING
+//    }
+//}, {
+//    timestamps: false
+//});
+//
+//app.get('/api/playlist', function(request, reponse){
+//    Playlist.findAll().then((playlist) => {
+//        response.json(playlist);
+//    });
+//});
+//
+//
 giftController(app);
+
+
 
 app.listen(3000,function(){
     console.log("Le serveur est lancer sur le port 3000 : http://localhost:3000/");
