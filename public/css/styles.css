@@ -26,3 +26,13 @@ input.new-item:focus {
   margin-top: 50px;
   margin-left: 50px;
 }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #F0F8FF;
+  color: white;
+  text-align: center;
+}
