@@ -17,3 +17,12 @@ input.new-item:focus {
 .edit {
   width: 100%;
 }
+
+.taille-gif{
+  width: 500px;
+}
+
+.space{
+  margin-top: 50px;
+  margin-left: 50px;
+}

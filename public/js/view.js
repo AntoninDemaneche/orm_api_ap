@@ -77,11 +77,12 @@ $(document).ready(function() {
 
   function createNewRow(gif) {
     const $newInputRow = $(
-      [
+      [ 
         "<li class='list-group-item gif-item'>",
-        "<span>",
+        "<img src='",
         gif.text,
-        "</span>",
+        "' alt='' class='taille-gif'",
+        "</img>",
         "<input type='text' class='edit' style='display: none;'>",
         "<button class='delete btn btn-danger'>x</button>",
         "</li>"
