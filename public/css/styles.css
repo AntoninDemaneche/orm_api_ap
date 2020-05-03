@@ -9,6 +9,7 @@ input.new-item:focus {
 
 .list-group-item > button.delete,
 .list-group-item > button.complete {
+  position: absolute;
   float: right;
   height: 25px;
   margin-left: 5px;
