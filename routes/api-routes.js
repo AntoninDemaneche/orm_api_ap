@@ -48,4 +48,51 @@ module.exports = (app) => {
         res.json(err);
       });
   });
+  /*##################*/
+  
+  app.get("/api/gif2s", (req, res) => {
+    db.Gif2.findAll({}).then((dbGif2) => {
+      res.json(dbGif2);
+    });
+  });
+
+  app.post("/api/gif2s", (req, res) => {
+    db.Gif2.create({
+      text: req.body.text,
+      complete: req.body.complete
+    }).then((dbGif2) => {
+      res.json(dbGif2);
+    })
+      .catch((err) => {
+        res.json(err);
+      });
+  });
+
+  app.delete("/api/gif2s/:id", (req, res) => {
+    db.Gif2.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then((dbGif2) => {
+      res.json(dbGif2);
+    });
+
+  });
+
+  app.put("/api/gif2s", (req, res) => {
+
+    db.Gif2.update({
+      text: req.body.text,
+      complete: req.body.complete
+    }, {
+      where: {
+        id: req.body.id
+      }
+    }).then((dbGif2) => {
+      res.json(dbGif2);
+    })
+      .catch((err) => {
+        res.json(err);
+      });
+  });
 };
