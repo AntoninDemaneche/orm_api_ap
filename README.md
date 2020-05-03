@@ -3,6 +3,13 @@
 ## Présentation du projet
 Ce projet de site est pour la matière ORM-API, il permet de partager des Gif à travers différentes catégories.
 
+## Architecture du site
+**Site sous :**
+* Node.js
+* Express
+* SQLITE
+* Sequelize
+
 ## Installation
 **Prérequis :**
 * NodeJS
@@ -10,24 +17,9 @@ Ce projet de site est pour la matière ORM-API, il permet de partager des Gif à
 
 **Mise en place :**
 
-Téléchargez les fichiers depuis le github puis effectuez les commandes suivantes :
+Téléchargez les fichiers depuis le Github puis effectuez la commande suivante :
 ```
-npm init
-```
-
-```
-npm install express -save
-```
-
-```
-npm install ejs -save
-```
-
-```
-npm install body-parser -save
-```
-```
-npm install -g nodemon
+npm install
 ```
 
 ##  Utilisation

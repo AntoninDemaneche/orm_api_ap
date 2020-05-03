@@ -25,7 +25,7 @@ $(document).ready(function() {
   
     function getGif2s() {
       $.get("/api/gif2s", (data) => {
-        gifs = data;
+        gif2s = data;
         initializeRows();
       });
     }
