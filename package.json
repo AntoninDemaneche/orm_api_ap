@@ -1,30 +1,19 @@
 {
-  "name": "orm_api_ap",
+  "name": "validations",
   "version": "1.0.0",
-  "description": "orm_api_ap",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AntoninDemaneche/orm_api_ap.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AntoninDemaneche/orm_api_ap/issues"
-  },
-  "homepage": "https://github.com/AntoninDemaneche/orm_api_ap#readme",
   "dependencies": {
-    "ajax": "0.0.4",
-    "body-parser": "^1.19.0",
-    "ejs": "^3.1.2",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.3",
-    "sequelize": "^5.21.7",
-    "sequelize-cli": "^5.5.1",
+    "express": "^4.16.3",
+    "sequelize": "^5.3.0",
     "sqlite3": "^4.2.0"
-  },
-  "devDependencies": {}
+  }
 }
