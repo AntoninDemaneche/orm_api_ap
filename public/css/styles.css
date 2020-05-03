@@ -32,7 +32,7 @@ input.new-item:focus {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #F0F8FF;
-  color: white;
+  background-color: white;
+  color: #A9A9A9;
   text-align: center;
 }
